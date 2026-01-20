@@ -1,0 +1,187 @@
+/* =========================
+   Theme
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 100%;
+    /* Set the root font size to the default OS/Browser setting */
+    --bg: #f7f9fb;
+    --highlight: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --brand: #a83232;
+    --brand-light: #f5e3e3;
+    --border: #e5e7eb;
+    --control-border: #eee0e0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    /* Set the body font size to 1x the root */
+    font-family: Segoe UI, Roboto, Helvetica, Arial;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* =========================
+   Header, Nav
+   ========================= */
+header {
+    background: var(--brand-light);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Primary navigation */
+header nav {
+    background: var(--brand);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: .75rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: var(--highlight);
+    font-weight: 600;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a[aria-current="page"] {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    /* Set the h1 font size to twice the root */
+    padding: 1rem 1rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* Set the h1 font size to 1.5x the root */
+    margin: 0 0 .5rem;
+    color: var(--brand);
+    font-size: 1.25rem;
+}
+
+/* =========================
+   Main Content
+   ========================= */
+main {
+    padding: 1rem 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+section {
+    background: var(--highlight);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1.0rem 1.25rem;
+    box-shadow: var(--bg);
+}
+
+/* Forms */
+
+.form-row {
+    margin: .75rem 0;
+    display: grid;
+    gap: .375rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    padding: .6rem .7rem;
+    border: 1px solid var(--control-border);
+    border-radius: .5rem;
+    font: inherit;
+    background: var(--highlight);
+    color: var(--text);
+}
+
+button {
+    background: var(--brand);
+    color: var(--highlight);
+    border: 1px solid var(--control-border);
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    padding: .75rem;
+}
+
+legend {
+    color: var(--brand);
+    font-weight: 600;
+}
+
+label {
+    cursor: pointer;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background: var(--brand);
+    color: var(--highlight);
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--highlight);
+    text-decoration: none;
+    padding: .4rem .6rem;
+    border-radius: .375rem;
+}

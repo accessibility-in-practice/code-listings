@@ -1,0 +1,119 @@
+/* =========================
+   Theme
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #f7f9fb;
+    --highlight: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --brand: #a83232;
+    --brand-light: #f5e3e3;
+    --border: #e5e7eb;
+}
+
+body {
+    font-family: Segoe UI, Roboto, Helvetica, Arial;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* =========================
+   Header, Nav, Hero
+   ========================= */
+.header {
+    background: var(--brand-light);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.header .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--brand);
+    padding: .75rem 1rem;
+}
+
+.header .navigation a {
+    color: var(--highlight);
+    font-weight: 600;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headings */
+.pageheading {
+    display: block;
+    padding: 1rem 1rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0.5rem
+}
+
+/* =========================
+   Main Content
+   ========================= */
+.content {
+    padding: 1rem 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.content>div {
+    background: var(--highlight);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1.25rem;
+    box-shadow: var(--bg);
+}
+
+/* Section headings */
+.subheading {
+    display: block;
+    color: var(--brand);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer {
+    background: var(--brand);
+    color: var(--highlight);
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.footer .links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem 1rem;
+}
+
+.footer a {
+    color: var(--highlight);
+    text-decoration: none;
+    padding: .4rem .6rem;
+}

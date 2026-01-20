@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DivSoup - for a better life!</title>
+        <meta name="description" content="The authoritative page on Div Soup">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/TabInterface.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Wonder-product!</h1>
+            <h2>Explore the world that awaits you</h2>
+        </header>
+        <main>
+            <section class="tabs">
+                <!-- TABS -->
+                <div role="tablist" 
+                    aria-label="Product Specifications" 
+                    id="specs-tabs">
+                    <button type="button" role="tab" 
+                        aria-selected="true" 
+                        aria-controls="panel-1" 
+                        id="tab-1" 
+                        tabindex="0">
+                        Overview
+                    </button>
+                    <button type="button" role="tab"
+                        aria-selected="false" 
+                        aria-controls="panel-2" 
+                        id="tab-2" 
+                        tabindex="-1">
+                        Technical Specifications
+                    </button>
+                </div>
+
+                <!-- PANELS -->
+                <div role="tabpanel" 
+                    id="panel-1"
+                    tabindex="0"
+                    aria-labelledby="tab-1">
+                    <p>
+                        This product is lovely, durable and designed for 
+                        something - not sure yet. Comes with a 25-year 
+                        all-in warranty.
+                    </p>
+                    <p>
+                        This is a <a href="#">focusable</a> element.
+                    </p>
+                    <img src="images/TabInterface.jpg" 
+                        alt="Close up of red object" 
+                        class="product_image" />
+                </div>
+
+                <div role="tabpanel" 
+                    id="panel-2" 
+                    tabindex="0"
+                    aria-labelledby="tab-2" 
+                    hidden>
+                    <ul>
+                        <li>Dimensions: 100 × 200 × 15mm</li>
+                        <li>Weight: 15Kg</li>
+                    </ul>
+                </div>
+            </section>
+        </main> 
+        <footer>
+            <p><small>© Products and such!</small></p>
+            <nav aria-label="Footer">
+                <ul>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="press.html">Press</a></li>
+                </ul>
+            </nav>
+            <p>
+                <small>Images on page kindly provided by
+                    <a href="https://www.pexels.com/@eprism-studio-108171/" 
+                    target="_blank">Eprism Studio on Pexels</a>
+                </small>
+            </p>
+        </footer>
+
+        <script src="js/TabInterface.js"></script>
+    </body>
+</html>
