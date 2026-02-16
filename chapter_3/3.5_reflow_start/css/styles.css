@@ -5,24 +5,23 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     font-size: 100%;
-    /* Set the root font size to the browser's default */
     --bg: #f7f9fb;
     --highlight: #ffffff;
     --text: #1e293b;
     --muted: #64748b;
-    --brand: #a83232;
-    --brand-light: #f5e3e3;
+    --brand: #2b2d42;
+    --brand-light: #edf2f4;
     --border: #e5e7eb;
     --footer: #000;
     --control-border: #777777;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -42,6 +41,7 @@ header {
     border-bottom: 1px solid var(--border);
     text-align: center;
     padding: 0.5rem;
+    width: 1200px;
 }
 
 /* Primary navigation */
@@ -91,19 +91,6 @@ h2 {
     font-size: 1.25rem;
 }
 
-.lang-selector {
-    float: left;
-}
-
-.lang-selector a {
-    text-decoration: none;
-}
-
-.lang-selector a[aria-current="true"] {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
 /* =========================
    Main Content
    ========================= */
@@ -121,64 +108,11 @@ section {
     box-shadow: 0 1px 2px var(--control-border);
 }
 
-
-/* =========================
-   Footer
-   ========================= */
-footer {
-    background: var(--footer);
-    color: var(--highlight);
-    margin-top: 2rem;
-    justify-content: center;
-    text-align: center;
-    padding: 0.1rem;
+.quote {
+    white-space: nowrap;
+    border: 1px solid var(--brand);
 }
 
-footer nav ul {
-    list-style: none;
-    padding: 0 1rem 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-footer a {
-    color: var(--highlight);
-    text-decoration: none;
-    padding: .4rem .6rem;
-    border-radius: .375rem;
-}
-
-
-/* =========================
-   Modal
-   ========================= */
-
-/* Overlay */
-#modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-/* Modal content */
-#modal {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 6px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 4px 12px var(--control-border);
-}
-
-/* Hidden state */
-.hidden {
-    display: none;
+.callout {
+    width: 1200px;
 }

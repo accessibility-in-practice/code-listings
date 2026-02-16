@@ -12,7 +12,8 @@ body {
 }
 
 :root {
-    font-size: 100%; /* Set the root font size to the default OS/Browser setting */
+    font-size: 100%;
+    /* Set the root font size to the browser's default */
     --bg: #f7f9fb;
     --highlight: #ffffff;
     --text: #1e293b;
@@ -20,11 +21,13 @@ body {
     --brand: #a83232;
     --brand-light: #f5e3e3;
     --border: #e5e7eb;
+    --footer: #000;
+    --control-border: #777777;
 }
 
 body {
     font-size: 1rem; /* Set the body font size to 1x the root */
-    font-family: Segoe UI, Roboto, Helvetica, Arial;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--text);
     background: var(--bg);
     line-height: 1.6;
@@ -74,7 +77,6 @@ header nav a[aria-current="page"] {
 h1 {
     font-size: 2rem; /* Set the h1 font size to twice the root */
     padding: 1rem 1rem;
-    font-size: 2.5rem;
     line-height: 1.2;
     margin: 0.5rem;
 }
@@ -113,7 +115,7 @@ section {
     border: 1px solid var(--border);
     border-radius: .75rem;
     padding: 1.0rem 1.25rem;
-    box-shadow: var(--bg);
+    box-shadow: 0 1px 2px var(--control-border);
 }
 
 
@@ -121,7 +123,7 @@ section {
    Footer
    ========================= */
 footer {
-    background: var(--brand);
+    background: var(--footer);
     color: var(--highlight);
     margin-top: 2rem;
     justify-content: center;

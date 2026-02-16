@@ -1,0 +1,35 @@
+:root {
+    font-size: 100%;
+    /* Informs the browser that both light and dark schemes are supported */
+    color-scheme: light dark;
+    /* Light mode (default) */
+    --bg: #ffffff;
+    --text: #111827;
+    --brand: #a83232;
+}
+
+/* Media query applies only when the user enables the dark mode preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode variables */
+        --bg: #0b1220;
+        --text: #e5e7eb;
+        --brand: #d06262;
+    }
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+main {
+    padding: 1rem;
+}
+
+a {
+    color: var(--brand);
+}
