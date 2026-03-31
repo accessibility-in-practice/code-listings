@@ -23,6 +23,8 @@ body {
     --border: #e5e7eb;
     --footer: #000;
     --control-border: #777777;
+    --tab-border: #ddd;
+    --tab-outline: #000;
 }
 
 body {
