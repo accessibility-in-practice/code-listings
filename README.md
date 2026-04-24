@@ -4,7 +4,7 @@ This repository contains the examples, patterns, and exercises from *Accessibili
 
 The goal of this companion is not to provide working code that can be copied over in some production site. It's to demonstrate how interfaces can be developed to be robust, semantic, and accessible by default.
 
-> Before building technology, pause and think about the people who will use it. Every small detail will make a big difference.
+> Before building or acquiring technology, pause and think about the people who will use it. Every small detail can make a big difference in someone's life.
 
 ## Repository Structure
 
