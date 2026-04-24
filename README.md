@@ -4,6 +4,8 @@ This repository contains the examples, patterns, and exercises from *Accessibili
 
 The goal of this companion is not to provide working code that can be copied over in some production site. It's to demonstrate how interfaces can be developed to be robust, semantic, and accessible by default.
 
+> Before building technology, pause and think about the people who will use it. Every small detail will make a big difference.
+
 ## Repository Structure
 
 Each folder maps to a chapter in the book:
@@ -48,4 +50,8 @@ This book assumes the following knowledge:
 ## About the Book
 
 This book is for digital product teams working in organizations where accessibility is required or expected, but access to expertise is limited. These include developers, designers, product managers, and technology leaders across public- and private-sector organizations who are familiar with modern web development and care about building the right solution – even in the face of real-world constraints. This book provides practical, sustainable guidance to help them plan, deliver, and maintain accessible web applications and content.
+
+## Feedback
+
+If you spot an issue or have a suggestion, feel free to open an issue. Improvements are always welcome.
 
