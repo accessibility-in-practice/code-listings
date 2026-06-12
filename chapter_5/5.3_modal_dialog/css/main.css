@@ -1,0 +1,35 @@
+ body {
+     font-family: system-ui, sans-serif;
+     line-height: 1.5;
+     max-width: 42rem;
+     margin: 2rem auto;
+     padding: 0 1rem;
+ }
+
+ main>*+* {
+     margin-block-start: 1rem;
+ }
+
+ .actions {
+     display: flex;
+     gap: 0.75rem;
+     flex-wrap: wrap;
+ }
+
+ dialog {
+     max-width: 32rem;
+     border: 1px solid #666;
+     border-radius: 0.5rem;
+     padding: 1.5rem;
+ }
+
+ dialog::backdrop {
+     background: rgb(0 0 0 / 0.45);
+ }
+
+ .dialog-actions {
+     display: flex;
+     gap: 0.75rem;
+     justify-content: flex-end;
+     margin-block-start: 1.5rem;
+ }

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Focus kept visible above a cookie banner</title>
+    <link rel="stylesheet" href="css/WithScrollPadding.css">
+</head>
+
+<body>
+    <main>
+        <h1>Privacy settings</h1>
+
+        <p>
+            Use this page to review how your information is stored, shared, and used
+            across our services.
+        </p>
+
+        <section>
+            <h2>Account data</h2>
+            <p>
+                Your account data includes your name, email address, sign-in history,
+                and communication preferences.
+            </p>
+            <p>
+                <a href="https://example.com/account-data">Review account data</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Personalization</h2>
+            <p>
+                Personalization settings control whether we use your activity to
+                recommend content and remember your preferences.
+            </p>
+            <p>
+                <a href="https://example.com/personalization">Manage personalization</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Cookies</h2>
+            <p>
+                Cookies help the site remember your choices and measure how people use
+                the service.
+            </p>
+            <p>
+                This final link is close to the bottom of the page. With
+                <code>scroll-padding-block-end</code>, the browser leaves room for the
+                fixed cookie banner when the link receives focus.
+            </p>
+            <p>
+                <a href="https://example.com/cookie-policy">Read the cookie policy</a>
+            </p>
+        </section>
+    </main>
+
+    <aside class="cookie-banner" aria-label="Cookie notice">
+        <div class="cookie-banner-content">
+            <p>
+                We use cookies to improve your experience and measure site performance.
+            </p>
+            <button type="button">Accept cookies</button>
+        </div>
+    </aside>
+</body>
+
+</html>

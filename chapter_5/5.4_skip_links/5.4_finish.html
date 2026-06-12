@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiple skip links example</title>
+    <link rel="stylesheet" type="text/css" href="css/WithSkipLinks.css">
+</head>
+
+<body>
+    <nav class="skip-links" aria-label="Skip links">
+        <a href="#main-content">Skip to main content</a>
+        <a href="#sidebar">Skip to sidebar</a>
+        <a href="#site-navigation">Skip to site navigation</a>
+    </nav>
+
+    <header>
+        <h1>Example shop</h1>
+
+        <nav id="site-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="/new">New products</a></li>
+                <li><a href="/offers">Special offers</a></li>
+                <li><a href="/account">Account</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <main id="main-content">
+            <h2>Product details</h2>
+
+            <p>
+                This is the main content area. A keyboard user can jump directly here
+                without tabbing through the repeated navigation links.
+            </p>
+
+            <p>
+                <a href="/product/specifications">View specifications</a>
+            </p>
+
+            <form action="/basket" method="post">
+                <div>
+                    <label for="quantity">Quantity</label>
+                    <input id="quantity" name="quantity" type="number" min="1" value="1">
+                </div>
+
+                <button type="submit">Add to basket</button>
+            </form>
+        </main>
+
+        <aside id="sidebar" aria-labelledby="sidebar-heading">
+            <h2 id="sidebar-heading">Related information</h2>
+
+            <ul>
+                <li><a href="/delivery">Delivery options</a></li>
+                <li><a href="/returns">Returns policy</a></li>
+                <li><a href="/reviews">Customer reviews</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; Example shop</p>
+    </footer>
+</body>
+
+</html>

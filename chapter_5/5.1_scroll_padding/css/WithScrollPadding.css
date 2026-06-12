@@ -1,0 +1,106 @@
+  :root {
+    /* Defines the height of the fixed banner */
+    --cookie-banner-height: 10rem;
+    /* Defines a small amount of extra space for the focus indicator. */
+    --focus-padding: 1rem;
+  }
+
+
+  html {
+    /* Asks the browser to keep interactive elements above the banner area when scrolled into view. */
+      scroll-padding-bottom: calc(var(--cookie-banner-height) + var(--focus-padding));
+  }
+
+  body {
+    /* Adds space to the document because fixed elements do not take up space in the normal layout. */
+    padding-block-end: var(--cookie-banner-height);
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+  }
+
+  main {
+    max-width: 42rem;
+    margin-inline: auto;
+    padding: 1rem;
+  }
+
+  section {
+    margin-block-start: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #767676;
+  }
+
+  label {
+    display: block;
+    margin-block-end: 0.25rem;
+    font-weight: 700;
+  }
+
+  input,
+  button,
+  a {
+      font: inherit;
+  }
+
+  input {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 24rem;
+      padding: 0.5rem;
+      border: 2px solid #555;
+  }
+
+  button {
+      margin-block-start: 1rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #222;
+      background: #222;
+      color: #fff;
+  }
+
+  /*
+      The focus indicator must also be visible once the component is
+      scrolled into view.
+    */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+      outline: 3px solid #000;
+      outline-offset: 4px;
+  }
+
+  .cookie-banner {
+      position: fixed;
+      inset-inline: 0;
+      inset-block-end: 0;
+      box-sizing: border-box;
+      min-height: var(--cookie-banner-height);
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      border-block-start: 4px solid #000;
+  }
+
+  .cookie-banner-content {
+      max-width: 42rem;
+      margin-inline: auto;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .cookie-banner p {
+      margin: 0;
+  }
+
+  .cookie-banner button {
+      padding: 0.5rem 1rem;
+      border: 2px solid #fff;
+      background: #fff;
+      color: #222;
+      white-space: nowrap;
+  }

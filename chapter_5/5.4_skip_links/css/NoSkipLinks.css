@@ -1,0 +1,29 @@
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+header,
+main,
+aside,
+footer {
+    padding: 1rem;
+}
+
+header {
+    border-block-end: 1px solid #ccc;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 16rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+main,
+aside {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}

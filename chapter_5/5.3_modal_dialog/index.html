@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Native dialog focus example</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <section aria-labelledby="shipping-details-heading">
+            <h2 id="shipping-details-heading">Shipping details</h2>
+            <p>
+                This page contains interactive elements before and after the dialog
+                trigger buttons. When the modal dialog is open, these page controls
+                cannot be reached with the keyboard or mouse.
+            </p>
+            <button type="button" id="open-modal">
+                See shipping methods
+            </button>
+        </section>
+        <section aria-labelledby="checkout-details-heading">
+            <h2 id="checkout-details-heading">Checkout details</h2>
+        
+            <form action="/payment-gateway" method="post">
+                <fieldset>
+                    <legend>Contact information</legend>
+        
+                    <div class="field">
+                        <label for="full-name">Full name</label>
+                        <input id="full-name" name="full-name" type="text" autocomplete="name" required>
+                    </div>
+        
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Communication preferences</legend>
+        
+                    <div class="field checkbox-field">
+                        <input id="updates-order" name="updates-order" type="checkbox" value="yes">
+                        <label for="updates-order">Send me order updates by email</label>
+                    </div>
+                    <div class="field checkbox-field">
+                        <input id="updates-offers" name="updates-offers" type="checkbox" value="yes">
+                        <label for="updates-offers">Keep me updated with future offers</label>
+                    </div>
+                </fieldset>
+        
+                <div class="form-actions">
+                    <button type="submit">
+                        Confirm payment
+                    </button>
+                </div>
+            </form>
+        </section>
+       
+    </main>
+
+    <!-- Modal dialog -->
+    <dialog id="modal-dialog" aria-labelledby="modal-title">
+        <h2 id="modal-title" tabindex="-1">Shipping details</h2>
+        <p>
+            Shipping options for your order include:
+            <ol>
+                <li>
+                    Standard
+                </li>
+                <li>
+                    Express
+                </li>
+            </ol>
+        </p>
+
+        <div class="dialog-actions">
+            <button type="button" id="close-modal">Continue</button>
+        </div>
+    </dialog>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
