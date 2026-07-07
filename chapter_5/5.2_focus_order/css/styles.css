@@ -118,7 +118,7 @@ h2 {
     text-decoration: none;
 }
 
-.lang-selector a[aria-current="true"] {
+.lang-selector a[aria-current="page"] {
     text-decoration: underline;
     font-weight: bold;
 }

@@ -26,11 +26,24 @@ body {
 }
 
 body {
-    font-size: 1rem; /* Set the body font size to 1x the root */
+    font-size: 1rem;
+    /* Set the body font size to 1x the root */
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--text);
     background: var(--bg);
     line-height: 1.6;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    /*margin: -1px; <-- fallback for older browsers*/
 }
 
 /* =========================
@@ -75,14 +88,16 @@ header nav a[aria-current="page"] {
 
 /* Headings */
 h1 {
-    font-size: 2rem; /* Set the h1 font size to twice the root */
+    font-size: 2rem;
+    /* Set the h1 font size to twice the root */
     padding: 1rem 1rem;
     line-height: 1.2;
     margin: 0.5rem;
 }
 
 h2 {
-    font-size: 1.5rem; /* Set the h1 font size to 1.5x the root */
+    font-size: 1.5rem;
+    /* Set the h1 font size to 1.5x the root */
     margin: 0 0 .5rem;
     color: var(--brand);
     font-size: 1.25rem;
@@ -94,7 +109,7 @@ h2 {
 
 .lang-selector a {
     text-decoration: none;
-}   
+}
 
 .lang-selector a[aria-current="page"] {
     text-decoration: underline;

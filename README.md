@@ -16,6 +16,9 @@ Each folder maps to a chapter in the book:
 - `chapter_5/` — Ensure effective navigation and interaction
 - ...
 
+- `guides` — Living manuals on various aspects, including:
+  - `DevTools` — Using DevTools for accessibility checks
+
 Each chapter includes:
 - Before/after examples
 - Code snippets from the book
