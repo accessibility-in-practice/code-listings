@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pets and more - Home</title>
+    <meta name="description" content="Pagina focandi indicati">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primarium">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <h1>Pets and more</h1>
+    </header>
+    <main>
+    
+        <section>
+            <h2>Request personal assistance</h2>
+            <form action="#" method="post" id="application-form">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="form-row">
+                    <label for="service">How can we help?</label>
+                    <textarea id="service" name="service" rows="3" aria-describedby="service-request"></textarea>
+                    <p id="service-request">Tell us what you need, and we'll get back to you with the best offers.</p>
+                </div>
+                <!-- Submit -->
+                <button type="submit">
+                    Submit
+                </button>
+            </form>            
+            <div id="toast" class="toast">
+                <span id="toast-message"></span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>© Pets and more!</small></p>
+        <nav aria-label="Leggatum">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Social Media">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/li.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/in.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/fb.png" alt="Facebook" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Icons by
+                <a href="https://icons8.com/" target="_blank">Icons8</a>
+            </small>
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

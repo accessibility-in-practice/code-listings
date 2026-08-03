@@ -1,0 +1,1097 @@
+/* =========================
+   Theme
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 100%;
+    /* Set the root font size to the browser's default */
+    --bg: #f7f9fb;
+    --highlight: #ffffff;
+    --text: #1e293b;
+    --muted: #282f38;
+    --brand: #a83232;
+    --brand-light: #f5e3e35b;
+    --border: #e5e7eb;
+    --footer: #000;
+    --control-border: #777777;
+    --transparent: transparent;
+    --brand-focus: #300a0a;
+    --brand-soft: color-mix(in srgb, var(--brand) 10%, var(--transparent));
+    
+    --brand-shadow: color-mix(in srgb, var(--brand) 24%, var(--transparent));
+    --text-shadow: color-mix(in srgb, var(--text) 10%, var(--transparent));
+    --footer-shadow: color-mix(in srgb, var(--footer) 33%, var(--transparent));
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    /* Set the body font size to 1x the root */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+/* =========================
+   Header, Nav
+   ========================= */
+header {
+    background: var(--brand-light);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Primary navigation */
+header nav {
+    background: var(--brand);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: .75rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: var(--highlight);
+    font-weight: 600;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a[aria-current="page"] {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    /* Set the h1 font size to twice the root */
+    padding: 1rem 1rem;
+    line-height: 1.2;
+    margin: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* Set the h1 font size to 1.5x the root */
+    margin: 0 0 .5rem;
+    color: var(--brand);
+    font-size: 1.25rem;
+}
+
+/* =========================
+   Main Content
+   ========================= */
+main {
+    padding: 1rem 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+section {
+    background: var(--highlight);
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1.0rem 1.25rem;
+    box-shadow: 0 1px 2px var(--control-border);
+}
+
+/* Forms */
+
+.form-row {
+    margin: .75rem 0;
+    display: grid;
+    gap: .375rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    padding: .6rem .7rem;
+    border: 1px solid var(--control-border);
+    border-radius: .5rem;
+    font: inherit;
+    background: var(--highlight);
+    color: var(--text);
+}
+
+button {
+    background: var(--brand);
+    color: var(--highlight);
+    border: 1px solid var(--control-border);
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    padding: .75rem;
+}
+
+legend {
+    color: var(--brand);
+    font-weight: 600;
+}
+
+label {
+    cursor: pointer;
+}
+
+.power-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font: 600 1rem system-ui;
+    cursor: pointer;
+}
+
+/* Visually hidden, but still native and accessible */
+.power-toggle input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Track */
+.switch {
+    width: 3.5rem;
+    height: 2rem;
+    padding: 0.2rem;
+    box-sizing: border-box;
+
+    background: var(--control-border);
+    border-radius: 999px;
+
+    transition:
+        background 250ms,
+        box-shadow 250ms,
+        transform 150ms;
+}
+
+/* Thumb */
+.switch::before {
+    content: "";
+    display: block;
+
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+
+    background: var(--highlight);
+    box-shadow: 0 0.15rem 0.4rem var(--footer-shadow);
+
+    transition:
+        translate 350ms cubic-bezier(.2, 1.6, .4, 1),
+        rotate 350ms;
+}
+
+/* Checked state */
+.power-toggle input:checked+.switch {
+    background: var(--brand);
+    box-shadow:
+        0 0 0 0.25rem var(--brand-focus),
+        0 0 1.25rem var(--brand-shadow);
+}
+
+.power-toggle input:checked+.switch::before {
+    translate: 1.5rem;
+    rotate: 360deg;
+}
+
+/* Keyboard focus */
+.power-toggle input:focus-visible+.switch {
+    outline: 3px solid var(--brand);
+    outline-offset: 3px;
+}
+
+/* Small press interaction */
+.power-toggle:active .switch {
+    transform: scale(0.94);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .switch,
+    .switch::before {
+        transition: none;
+    }
+}
+
+.power-toggle:has(input:checked) {
+    color: var(--brand);
+}
+
+.power-toggle:has(input:checked) .switch {
+    animation: pulse 500ms ease-out;
+}
+
+@keyframes pulse {
+    50% {
+        scale: 1.12;
+    }
+}
+
+/* Checkbox group */
+
+.checkbox-group {
+    width: min(100%, 380px);
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--highlight);
+    box-shadow: 0 18px 45px var(--text-shadow);
+}
+
+.checkbox-group legend {
+    padding: 0;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.group-description {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.checkbox-list {
+    display: grid;
+    gap: 10px;
+}
+
+.checkbox-option {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Visually hidden, but still accessible */
+.checkbox-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--highlight);
+    transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.checkbox-option:hover .checkbox-content {
+    border-color: var(--brand);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--brand-soft);
+}
+
+.custom-checkbox {
+    position: relative;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--control-border);
+    border-radius: 7px;
+    background: var(--highlight);
+    transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        transform 180ms ease;
+}
+
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--highlight);
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transform: rotate(45deg) scale(0.4);
+    transition:
+        opacity 150ms ease,
+        transform 200ms cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+.option-text {
+    display: grid;
+    gap: 2px;
+}
+
+.option-title {
+    font-weight: 650;
+}
+
+.option-description {
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.checkbox-option input:checked+.checkbox-content {
+    border-color: var(--brand);
+    background: var(--brand-light);
+    box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.checkbox-option input:checked+.checkbox-content .custom-checkbox {
+    border-color: var(--brand);
+    background: var(--brand);
+    transform: scale(1.08);
+    animation: checkbox-pop 250ms ease;
+}
+
+.checkbox-option input:checked+.checkbox-content .custom-checkbox::after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+.checkbox-option input:focus-visible+.checkbox-content {
+    outline: 3px solid var(--brand-focus);
+    outline-offset: 3px;
+}
+
+.checkbox-option input:disabled+.checkbox-content {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background: var(--bg);
+    transform: none;
+    box-shadow: none;
+}
+
+@keyframes checkbox-pop {
+    0% {
+        transform: scale(0.8);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Select list with autocomplete */
+.autocomplete {
+    width: min(100%, 380px);
+}
+
+.autocomplete label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.autocomplete input {
+    width: 100%;
+    height: 52px;
+    padding: 0 48px 0 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--highlight);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    box-shadow: 0 8px 24px var(--text-shadow);
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+/* Hide Chrome, Edge, and Safari's native datalist arrow */
+.autocomplete input::-webkit-calendar-picker-indicator {
+    display: none !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Hide older browser controls where supported */
+.autocomplete input::-webkit-list-button {
+    display: none !important;
+}
+
+.autocomplete input:hover {
+    border-color: var(--brand);
+}
+
+.autocomplete input:focus {
+    border-color: var(--brand);
+    box-shadow:
+        0 0 0 4px var(--brand-soft),
+        0 10px 30px var(--text-shadow);
+    transform: translateY(-1px);
+}
+
+.autocomplete input::placeholder {
+    color: var(--muted);
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    pointer-events: none;
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 180ms ease;
+}
+
+.input-wrapper:focus-within .dropdown-icon {
+    transform: translateY(-30%) rotate(225deg);
+}
+
+.hint {
+    margin: 8px 2px 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button {
+    position: relative;
+    min-width: 130px;
+    padding: 13px 22px;
+    overflow: hidden;
+    border: 1px solid var(--transparent);
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+    isolation: isolate;
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.25);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0) scale(0.96);
+}
+
+.button:active::after {
+    animation: button-pulse 350ms ease-out;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--brand-focus);
+    outline-offset: 3px;
+    animation: keyboard-press 350ms ease-out;
+}
+
+.button:focus-visible::after {
+    animation: button-pulse 350ms ease-out;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    transform: none;
+    box-shadow: none;
+}
+
+.button-primary {
+    background: var(--brand);
+    color: var(--highlight);
+    box-shadow: 0 8px 20px var(--brand-shadow);
+}
+
+.button-primary:hover {
+    background: var(--brand);
+    box-shadow: 0 12px 26px var(--brand-shadow);
+}
+
+.button-secondary {
+    border-color: var(--border);
+    background: var(--highlight);
+    color: var(--text);
+    box-shadow: 0 6px 16px var(--text-shadow);
+}
+
+.button-secondary:hover {
+    border-color: var(--brand);
+    background: var(--brand-light);
+    color: var(--brand);
+    box-shadow: 0 10px 22px var(--text-shadow);
+}
+
+@keyframes button-pulse {
+    0% {
+        opacity: 0.22;
+        transform: scale(0.25);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+@keyframes keyboard-press {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.96);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+    }
+
+    .button,
+    .button::after {
+        animation: none !important;
+    }
+}
+
+/* Tri-toggle */
+
+/* .tri-toggle {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 0.25rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--border);
+
+    font: 600 0.9rem system-ui;
+} */
+
+.tri-toggle {
+    width: fit-content;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 999px;
+    background: var(--brand-light);
+    padding: 0;
+    border: 1px solid red;
+}
+
+.tri-toggle legend {
+    margin-bottom: 0.5rem;
+    color: var(--brand);
+    font-weight: 600;
+}
+
+.tri-toggle-options {
+    padding: 0.25rem;
+    border-radius: 999px;
+    
+}
+
+.tri-toggle label {
+    position: relative;
+    cursor: pointer;
+}
+
+.tri-toggle input {
+    position: absolute;
+    opacity: 0;
+}
+
+.tri-toggle span {
+    display: block;
+    min-width: 2.25rem;
+    padding: 0.6rem 0.55rem;
+    border-radius: 999px;
+    text-align: center;
+
+    transition:
+        background 200ms,
+        color 200ms,
+        transform 200ms,
+        box-shadow 200ms;
+}
+
+.tri-toggle input:checked+span {
+    color: var(--highlight);
+    background: var(--brand);
+    box-shadow: 0 0.1rem 0.3rem var(--footer-shadow);
+    transform: scale(1.09);
+}
+
+.tri-toggle input:focus-visible+span {
+    outline: 2px solid var(--brand-focus);
+    outline-offset: 1px;
+}
+
+.tri-toggle label:active span {
+    transform: scale(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tri-toggle span {
+        transition: none;
+    }
+}
+
+/* Radio group */
+.radio-group {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 24rem;
+    padding: 0;
+    border: 0;
+    font-family: system-ui;
+}
+
+.radio-group legend {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.radio-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    padding: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 1rem;
+
+    cursor: pointer;
+    transition:
+        border-color 200ms,
+        background 200ms,
+        transform 200ms,
+        box-shadow 200ms;
+}
+
+/* Hidden visually, but still native */
+.radio-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Custom radio circle */
+.indicator {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 auto;
+
+    border: 2px solid var(--control-border);
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    transition:
+        border-color 200ms,
+        transform 300ms;
+}
+
+/* Inner dot */
+.indicator::before {
+    content: "";
+    width: 0.65rem;
+    height: 0.65rem;
+
+    background: var(--brand);
+    border-radius: 50%;
+
+    scale: 0;
+    transition: scale 300ms cubic-bezier(.2, 1.7, .4, 1);
+}
+
+.radio-card strong,
+.radio-card small {
+    display: block;
+}
+
+.radio-card small {
+    margin-top: 0.15rem;
+    color: var(--muted);
+}
+
+/* The whole label responds to its input */
+.radio-card:has(input:checked) {
+    border-color: var(--brand);
+    background: var(--brand-light);
+    box-shadow: 0 0.5rem 1.5rem var(--brand-shadow);
+    transform: translateX(0.35rem);
+}
+
+.radio-card input:checked+.indicator {
+    border-color: var(--brand);
+    transform: rotate(360deg);
+}
+
+.radio-card input:checked+.indicator::before {
+    scale: 1;
+}
+
+/* Keyboard focus */
+.radio-card:has(input:focus-visible) {
+    outline: 3px solid var(--brand-focus);
+    outline-offset: 3px;
+}
+
+/* Mouse or touch press */
+.radio-card:active {
+    scale: 0.98;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .radio-card,
+    .indicator,
+    .indicator::before {
+        transition: none;
+    }
+}
+
+.toast {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    max-width: 24rem;
+    padding: 1rem;
+    border: 2px solid currentColor;
+    background: var(--bg);
+    color: var(--text);
+    box-shadow: 0 0.25rem 1rem var(--brand);
+
+    /* Start outside the right edge of the viewport. */
+    transform: translateX(calc(100% + 2rem));
+    opacity: 0;
+    transition:
+        transform 300ms ease,
+        opacity 300ms ease;
+}
+
+.toast.is-visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toast {
+        /* Minimal toast fade-in animation */
+        transition: opacity 150ms ease;
+    }
+}
+
+/* Disclosure */
+.disclosure {
+    max-width: 42rem;
+    overflow: clip;
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
+    background: var(--highlight);
+    color: var(--text);
+    box-shadow:
+        0 0.25rem 1rem var(--text-shadow),
+        0 0 0 0 var(--brand-shadow);
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.disclosure:hover {
+    border-color: var(--control-border);
+}
+
+.disclosure[open] {
+    border-color: var(--brand);
+    box-shadow:
+        0 0.25rem 1rem var(--text-shadow),
+        0 0 0 0.1875rem var(--brand-soft);
+}
+
+/*
+ * Draw the keyboard focus indicator around the outer disclosure.
+ * This prevents it from being clipped by overflow: clip.
+ */
+.disclosure:has(.disclosure__summary:focus-visible) {
+    border-color: var(--brand-focus);
+    box-shadow:
+        0 0.25rem 1rem var(--text-shadow),
+        0 0 0 0.1875rem var(--brand-focus);
+}
+
+.disclosure__summary {
+    min-height: 3.5rem;
+    padding: 1rem 1.125rem;
+    border-radius: inherit;
+    cursor: pointer;
+    list-style-position: inside;
+    user-select: none;
+    -webkit-tap-highlight-color: var(--transparent);
+    transition:
+        background-color 180ms ease,
+        color 180ms ease;
+}
+
+/*
+ * Style the browser-provided disclosure marker.
+ * Its shape and expanded-state behaviour remain native.
+ */
+.disclosure__summary::marker {
+    color: var(--brand);
+    font-size: 1.1em;
+}
+
+.disclosure__summary::-webkit-details-marker {
+    color: var(--brand);
+    font-size: 1.1em;
+}
+
+.disclosure__summary:hover {
+    background: var(--brand-light);
+}
+
+.disclosure__summary:focus-visible {
+    outline: none;
+    animation: keyboard-press 350ms ease-out;
+}
+
+.disclosure[open] .disclosure__summary {
+    color: var(--brand-focus);
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+}
+
+.disclosure__title {
+    margin-inline-start: 0.375rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.disclosure__description {
+    display: block;
+    margin-block-start: 0.25rem;
+    margin-inline-start: 1.65rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.disclosure__content {
+    margin-inline: 1.125rem;
+    padding-block: 1rem 1.125rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.disclosure__content> :first-child {
+    margin-block-start: 0;
+}
+
+.disclosure__content> :last-child {
+    margin-block-end: 0;
+}
+
+/*
+ * Smooth native disclosure animation.
+ *
+ * Browsers without support for ::details-content retain the normal,
+ * accessible open-and-close behaviour.
+ */
+@supports selector(details::details-content) {
+    :root {
+        interpolate-size: allow-keywords;
+    }
+
+    .disclosure::details-content {
+        block-size: 0;
+        overflow: clip;
+        opacity: 0;
+        transform: translateY(-0.375rem);
+        transition:
+            block-size 300ms cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 180ms ease,
+            transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+            content-visibility 300ms allow-discrete;
+    }
+
+    .disclosure[open]::details-content {
+        block-size: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .disclosure,
+    .disclosure__summary,
+    .disclosure::details-content {
+        transition: none;
+        animation: none;
+    }
+}
+
+/*
+ * Smooth native disclosure animation.
+ *
+ * Browsers without support for ::details-content still retain the normal,
+ * accessible open-and-close behavior.
+ */
+@supports selector(details::details-content) {
+    :root {
+        interpolate-size: allow-keywords;
+    }
+
+    .disclosure::details-content {
+        block-size: 0;
+        overflow: clip;
+        opacity: 0;
+        transform: translateY(-0.375rem);
+        transition:
+            block-size 300ms cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 180ms ease,
+            transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+            content-visibility 300ms allow-discrete;
+    }
+
+    .disclosure[open]::details-content {
+        block-size: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .disclosure,
+    .disclosure__summary,
+    .disclosure::details-content {
+        transition: none;
+        animation: none;
+    }
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background: var(--footer);
+    color: var(--highlight);
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--highlight);
+    text-decoration: none;
+    padding: .4rem .6rem;
+    border-radius: .375rem;
+}

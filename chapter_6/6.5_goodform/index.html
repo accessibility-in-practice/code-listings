@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pets and more - Home</title>
+    <meta name="description" content="Pagina focandi indicati">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primarium">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <h1>Pets and more</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Choosing a vet</h2>
+            <p>
+                Before choosing a vet, check whether the practice has experience with your dog's breed.
+            </p>
+            <p>
+                You may also contact us with additional information, to help you find the best fit:
+            </p>
+        </section>
+        <section>
+            <h2 id="form-title">Search for a provider</h2>
+            <p id="complaint-form-instructions" class="form-instructions">
+                All fields are required. Instructions and expected formats are
+                provided with each field.
+            </p>
+            <form id="dog-complaint-form" action="/dog-complaints" method="post" aria-labelledby="form-title"
+                aria-describedby="complaint-form-instructions" novalidate>
+                <div id="error-summary" class="error-summary" tabindex="-1" hidden>
+                    <h2>There is a problem</h2>
+                    <p>Correct the following fields and submit the form again:</p>
+                    <ul id="error-list"></ul>
+                </div>
+            
+                <fieldset>
+                    <legend>Owner details</legend>
+                    <div class="form-row" id="owner-name-group">
+                        <label for="owner-name">
+                            Owner's name
+                            <span class="required-text">(required)</span>
+                        </label>
+                        <p id="owner-name-error" class="error-message" hidden></p>
+                        <input id="owner-name" name="owner_name" type="text" autocomplete="name" autocapitalize="words"  
+                            spellcheck="false" required aria-describedby="owner-name-hint owner-name-error" />
+                        <div id="owner-name-hint" class="hint">
+                            Enter the owner's first and last name.
+                        </div>
+                    </div>
+            
+                    <div class="form-row" id="owner-email-group">
+                        <label for="owner-email">
+                            Owner's email address
+                            <span class="required-text">(required)</span>
+                        </label>
+                        <p id="owner-email-error" class="error-message" hidden></p>
+                        <input id="owner-email" name="owner_email" type="email" autocomplete="email" autocapitalize="none"
+                            spellcheck="false" required aria-describedby="owner-email-hint owner-email-error" />
+                        <div id="owner-email-hint" class="hint">
+                            For example, name@example.com.
+                        </div>
+                    </div>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Dog details</legend>
+            
+                    <div class="form-row" id="dog-breed-group">
+                        <label for="dog-breed">
+                            Dog's breed
+                            <span class="required-text">(required)</span>
+                        </label>
+                        <p id="dog-breed-error" class="error-message" hidden></p>
+                        <input id="dog-breed" name="dog_breed" type="text" autocapitalize="words" spellcheck="true" required
+                            aria-describedby="dog-breed-hint dog-breed-error" />
+                        <div id="dog-breed-hint" class="hint">
+                            Enter "mixed breed" when the exact breed is unknown.
+                        </div>
+                    </div>
+            
+                    <div class="form-row" id="dog-age-group">
+                        <label for="dog-age">
+                            Dog's age in years
+                            <span class="required-text">(required)</span>
+                        </label>
+                        <p id="dog-age-error" class="error-message" hidden></p>
+                        <input id="dog-age" name="dog_age" type="number" inputmode="numeric" min="0" max="30" step="1" required
+                            aria-describedby="dog-age-hint dog-age-error" />
+                        <div id="dog-age-hint" class="hint">
+                            Enter a whole number from 0 to 30. Use 0 for a dog under one year old.
+                        </div>
+                    </div>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Complaint details</legend>
+            
+                    <div class="form-row" id="complaint-group">
+                        <label for="complaint">
+                            What is the complaint?
+                            <span class="required-text">(required)</span>
+                        </label>
+                        <p id="complaint-error" class="error-message" hidden></p>
+                        <textarea id="complaint" name="complaint" rows="7" minlength="20" maxlength="1000" autocapitalize="sentences"
+                            spellcheck="true" required aria-describedby="complaint-hint complaint-error"></textarea>
+                        <div id="complaint-hint" class="hint">
+                            Include what happened, approximately when it happened, and any action already taken. Enter between 20 and 1,000
+                            characters.
+                        </div>
+                    </div>
+                </fieldset>
+            
+                <div class="form-actions">
+                    <button class="button-primary" type="submit">
+                        Submit request
+                    </button>
+            
+                    <button id="clear-form" class="button-secondary" type="reset" aria-describedby="reset-note">
+                        Clear all fields
+                    </button>
+                </div>
+            
+                <p class="reset-note" id="reset-note">
+                    "Clear all fields" permanently removes the information currently entered in this form.
+                </p>
+            
+                <!-- Form status is announced without moving keyboard focus. -->
+                <div id="form-status" class="status" role="status" aria-live="polite" aria-atomic="true"></div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p><small>© Pets and more!</small></p>
+        <nav aria-label="Leggatum">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Social Media">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/li.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/in.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/fb.png" alt="Facebook" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Icons by
+                <a href="https://icons8.com/" target="_blank">Icons8</a>
+            </small>
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

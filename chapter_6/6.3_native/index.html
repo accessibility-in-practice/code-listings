@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pets and more - Home</title>
+    <meta name="description" content="Pagina focandi indicati">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primarium">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <h1>Pets and more</h1>
+    </header>
+    <main>
+
+        <section>
+            <h2>Request personal assistance</h2>
+            <form action="#" method="post" id="application-form">
+                <div class="form-row">
+                    <fieldset class="radio-group">
+                        <legend>Choose a plan</legend>
+                    
+                        <label class="radio-card">
+                            <input type="radio" name="plan" value="starter" checked>
+                            <span class="indicator"></span>
+                            <span>
+                                <strong>Starter</strong>
+                                <small>Families with one fluffy pet</small>
+                            </span>
+                        </label>
+                    
+                        <label class="radio-card">
+                            <input type="radio" name="plan" value="pro">
+                            <span class="indicator"></span>
+                            <span>
+                                <strong>Pro</strong>
+                                <small>Farmers and enthusiasts</small>
+                            </span>
+                        </label>
+                    
+                        <label class="radio-card">
+                            <input type="radio" name="plan" value="business">
+                            <span class="indicator"></span>
+                            <span>
+                                <strong>Business</strong>
+                                <small>For rescue homes and agencies</small>
+                            </span>
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <fieldset class="tri-toggle">
+                        <legend>Notifications</legend>
+                    
+                        <label>
+                            <input type="radio" name="notifications" value="off">
+                            <span>Off</span>
+                        </label>
+                    
+                        <label>
+                            <input type="radio" name="notifications" value="auto" checked>
+                            <span>Auto</span>
+                        </label>
+                    
+                        <label>
+                            <input type="radio" name="notifications" value="on">
+                            <span>On</span>
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <label class="power-toggle">
+                        <input type="checkbox" name="email-contact">
+                        <span class="switch" aria-hidden="true"></span>
+                        <span>Can we contact you by email?</span>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <fieldset class="checkbox-group" aria-describedby="group-description">
+                        <legend>Select your interests</legend>
+                    
+                        <p class="group-description" id="group-description">
+                            Select as many options as you like.
+                        </p>
+                    
+                        <div class="checkbox-list">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests" value="design" />
+                    
+                                <span class="checkbox-content">
+                                    <span class="custom-checkbox" aria-hidden="true"></span>
+                    
+                                    <span class="option-text">
+                                        <span class="option-title">Nutrition</span>
+                                        <span class="option-description">Food, vitamins and supplements</span>
+                                    </span>
+                                </span>
+                            </label>
+                    
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests" value="development" />
+                    
+                                <span class="checkbox-content">
+                                    <span class="custom-checkbox" aria-hidden="true"></span>
+                    
+                                    <span class="option-text">
+                                        <span class="option-title">Play and exercise</span>
+                                        <span class="option-description">Toys, electronics, and trackers</span>
+                                    </span>
+                                </span>
+                            </label>
+                    
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests" value="marketing" />
+                    
+                                <span class="checkbox-content">
+                                    <span class="custom-checkbox" aria-hidden="true"></span>
+                    
+                                    <span class="option-text">
+                                        <span class="option-title">Offers</span>
+                                        <span class="option-description">Offers and flash sales</span>
+                                    </span>
+                                </span>
+                            </label>
+                    
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="interests" value="research" disabled />
+                    
+                                <span class="checkbox-content">
+                                    <span class="custom-checkbox" aria-hidden="true"></span>
+                    
+                                    <span class="option-text">
+                                        <span class="option-title">Education</span>
+                                        <span class="option-description">Currently unavailable</span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-row">
+                    <div class="autocomplete">
+                        <label for="country">Choose a country</label>
+                    
+                        <div class="input-wrapper">
+                            <input type="text" id="country" name="country" list="country-options" placeholder="Start typing..."
+                                autocomplete="off" />
+                    
+                            <span class="dropdown-icon" aria-hidden="true"></span>
+                        </div>
+                        <datalist id="country-options">
+                            <option value="Australia"></option>
+                            <option value="Canada"></option>
+                            <option value="France"></option>
+                            <option value="Germany"></option>
+                            <option value="India"></option>
+                            <option value="Italy"></option>
+                            <option value="Japan"></option>
+                            <option value="Malta"></option>
+                            <option value="Spain"></option>
+                            <option value="United Kingdom"></option>
+                            <option value="United States"></option>
+                        </datalist>
+                    
+                        <p class="hint">Type to filter the available suggestions.</p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <details class="disclosure">
+                        <summary class="disclosure__summary">
+                            <span class="disclosure__title">How we match you with a vet</span>
+                            <span class="disclosure__description">
+                            Learn how your pet's needs are used to recommend suitable practices.
+                            </span>
+                        </summary>
+
+                        <div class="disclosure__content">
+                            <p>
+                            First you tell us about your pet, the care they need, your location, and any
+                            preferences such as appointment times or home visits. We then compare this
+                            information with participating veterinary practices and show the matches
+                            that best fit your requirements.
+                            </p>
+                        </div>
+                        </details>
+
+                        <details class="disclosure">
+                        <summary class="disclosure__summary">
+                            <span class="disclosure__title">What happens after you choose a vet</span>
+                            <span class="disclosure__description">
+                            Find out how to contact a practice and arrange an appointment.
+                            </span>
+                        </summary>
+
+                        <div class="disclosure__content">
+                            <p>
+                            Once matches are found we send you a list of practices from which you
+                            make your selections. At this point, we will put you in touch with the 
+                            main contact person to set an appointment directly with them. The veterinary
+                            practice will confirm availability, discuss your pet's needs, and explain 
+                            any consultation fees.
+                            </p>
+                        </div>
+                        </details>
+                </div>
+                <div class="form-row">
+                    <div class="button-group">
+                        <button class="button button-primary" type="submit">
+                            Submit
+                        </button>
+                    
+                        <button class="button button-secondary" type="reset">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+                
+            </form>
+            <!-- The live region must be added to the DOM before messages are added to it. -->
+            <div id="toast" role="status" class="toast">
+                <span id="toast-message"></span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>© Pets and more!</small></p>
+        <nav aria-label="Leggatum">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Social Media">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/li.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/in.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/fb.png" alt="Facebook" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Icons by
+                <a href="https://icons8.com/" target="_blank">Icons8</a>
+            </small>
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

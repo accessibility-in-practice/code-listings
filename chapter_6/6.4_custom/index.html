@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pets and more - Home</title>
+    <meta name="description" content="Pagina focandi indicati">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primarium">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <h1>Pets and more</h1>
+    </header>
+    <main>
+
+        <section>
+            <h2>Request personal assistance</h2>
+            <form action="#" method="post" id="application-form">
+                <div class="form-row">
+                    <label for="country">Country</label>
+                    
+                    <div class="combobox">
+                        <input id="country" name="country" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
+                            aria-controls="country-listbox" aria-describedby="country-hint" autocomplete="off">
+                    
+                        <ul id="country-listbox" role="listbox" aria-label="Country suggestions" hidden>
+                            <li id="country-option-australia" role="option" aria-selected="false">
+                                Australia
+                            </li>
+                    
+                            <li id="country-option-canada" role="option" aria-selected="false">
+                                Canada
+                            </li>
+                    
+                            <li id="country-option-ireland" role="option" aria-selected="false">
+                                Ireland
+                            </li>
+                    
+                            <li id="country-option-malta" role="option" aria-selected="false">
+                                Malta
+                            </li>
+                    
+                            <li id="country-option-new-zealand" role="option" aria-selected="false">
+                                New Zealand
+                            </li>
+                    
+                            <li id="country-option-united-kingdom" role="option" aria-selected="false">
+                                United Kingdom
+                            </li>
+                    
+                            <li id="country-option-united-states" role="option" aria-selected="false">
+                                United States
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <p id="country-hint" class="hint">
+                        Type to filter the suggestions. Use the Arrow keys to browse and
+                        Enter to select.
+                    </p>
+                    
+                    <div id="results-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="button-group">
+                        <button class="button button-primary" type="submit">
+                            Submit
+                        </button>
+                    
+                        <button class="button button-secondary" type="reset">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+                
+            </form>
+            <!-- The live region must be added to the DOM before messages are added to it. -->
+            <div id="toast" role="status" class="toast">
+                <span id="toast-message"></span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>© Pets and more!</small></p>
+        <nav aria-label="Leggatum">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Social Media">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/li.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/in.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/fb.png" alt="Facebook" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Icons by
+                <a href="https://icons8.com/" target="_blank">Icons8</a>
+            </small>
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
