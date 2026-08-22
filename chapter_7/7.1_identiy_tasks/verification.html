@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pets and more - Home</title>
+    <meta name="description" content="Pagina focandi indicati">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primarium">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <h1>Pets and more</h1>
+    </header>
+    <main>
+        <section>
+            <h2 id="otp-form-title">Verify your identity</h2>
+            <p id="otp-form-instructions" class="form-instructions">
+                Enter the 6-digit verification code we sent to your phone.
+            </p>
+            <form action="/verify" method="post" 
+                aria-labelledby="otp-form-title" 
+                aria-describedby="otp-form-instructions">
+                <div class="form-row">
+                    <label for="verification-code">
+                        Verification code
+                        <span class="required-text">(required)</span>
+                    </label>
+                    <p id="otp-error" class="error-message" hidden></p>
+                    <input 
+                        id="verification-code" 
+                        name="verification-code" 
+                        class="otp-input"
+                        type="text" 
+                        inputmode="numeric"
+                        autocomplete="one-time-code"
+                        pattern="[0-9]{6}" 
+                        maxlength="6"
+                        required 
+                        aria-describedby="otp-hint otp-error" />
+                    <div id="otp-hint" class="hint">
+                        Type or paste the 6-digit code sent to your phone. 
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="button-primary" type="submit">
+                        Verify code
+                    </button>
+                    <a href="/resend-otc">
+                        Resend one-time code
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p><small>© Pets and more!</small></p>
+        <nav aria-label="Leggatum">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Social Media">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/li.png" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/in.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/fb.png" alt="Facebook" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>
+            <small>Icons by
+                <a href="https://icons8.com/" target="_blank">Icons8</a>
+            </small>
+        </p>
+    </footer>
+</body>
+
+</html>
