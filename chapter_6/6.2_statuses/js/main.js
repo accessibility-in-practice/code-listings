@@ -4,16 +4,30 @@ const toast = document.querySelector("#toast");
 const toastMessage = document.querySelector("#toast-message");
 const dismissButton = document.querySelector("#dismiss-toast");
 
+let toastTimeout;
+
 function showToast(message) {
     toastMessage.textContent = message;
+    if (!toast.matches(":popover-open")) {
+        toast.showPopover();
+    }
     toast.classList.add("is-visible");
-    setTimeout(function () {
-        toast.classList.remove("is-visible");
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(function () {
+        hideToast();
     }, 4000);
 }
 
 function hideToast() {
+    clearTimeout(toastTimeout);
     toast.classList.remove("is-visible");
+
+    //This allows a transition animation to complete first (when allowed).
+    toast.addEventListener("transitionend", function () {
+        if (toast.matches(":popover-open")) {
+            toast.hidePopover();
+        }
+    }, { once: true });
 }
 
 //Mimicking server side processing

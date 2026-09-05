@@ -160,8 +160,8 @@ label {
 
 .toast {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+    inset: auto 1rem 1rem auto;
+    margin: 0;
     display: flex;
     gap: 1rem;
     align-items: center;
