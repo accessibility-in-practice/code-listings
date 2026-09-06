@@ -1,3 +1,5 @@
+<img alt="Banner with text - Architecting web systems and applications that work for everyone, and go far beyond compliance" src="https://github.com/user-attachments/assets/1853cf5c-c215-4c2d-aebc-e0189da35cef" />
+
 # Architecting Accessibility — Companion Code
 
 This repository contains the examples, patterns, and exercises from *Architecting Accessibility* (Chris Porter - Manning).
