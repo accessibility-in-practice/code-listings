@@ -10,13 +10,12 @@ The goal of this companion is not to provide working code that can be copied ove
 
 ## Repository Structure
 
-Each folder maps to a chapter in the book:
-
-- `chapter_2/` — People, technologies and fundamental techniques
-- `chapter_3/` — Make content easy to perceive
-- `chapter_4/` — Make text easy to understand
-- `chapter_5/` — Ensure effective navigation and interaction
-- ...
+- `code` — Example code and listings used throughout the book, organized by chapter:
+  - `chapter_2/` — People, technologies and fundamental techniques
+  - `chapter_3/` — Make content easy to perceive
+  - `chapter_4/` — Make text easy to understand
+  - `chapter_5/` — Ensure effective navigation and interaction
+  - ...
 
 - `guides` — Living manuals on various aspects, including:
   - `DevTools` — Using DevTools for accessibility checks
